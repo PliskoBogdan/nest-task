@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mycard{
+  margin-top: 30px;
+}
+
+
+.auth-card{
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 5px auto;
+
+}
+
+.post__gallery__item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #ee6e73;
+}
+
+.post__gallery__item-title{
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  
+}
+.post__gallery__item-content{
+  font-size: 18px;
+color: #fff;
+  text-align: center;
+}
+.post__gallery__item-author{
+  font-size: 13px;
+  
+}
+
+#toast-container{
+  top:30px !important;
+  right: 20px !important;
+  left: auto !important;
+}
+
+
+.editPost{
+  position: absolute;
+  right:  0;
+  top: 0;
+  cursor: pointer
+
+}
+
+.post__gallery__item{
+  margin: 10px 0;
+}
+
+.post__creator__block{
+  display: flex;
+  align-items: center;
+}
+.btn{ 
+  margin: 5px 0;
+}
+.class-block{
+  display: none;
+}
