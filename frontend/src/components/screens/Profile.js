@@ -109,7 +109,10 @@ const Profile = () => {
                                     <i className="material-icons deletePost" onClick={() => deltePost(item._id)}>delete</i>
                                     <i className="material-icons editPost" onClick={(e) => { editBlockFunc(i) }}>create</i>
                                 </div>
-                                <p className="post__gallery__item-content">{item.content}</p>
+                                <div>
+                                    <p className="post__gallery__item-content">{item.content}</p>
+                                </div>
+
                                 <span className="post__gallery__item-author">Posted: {userName}</span>
                                 <div className="gallery__change__block hide-block">
                                     <input

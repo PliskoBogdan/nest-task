@@ -13,8 +13,8 @@ const CreatePost = () => {
     const userStore = JSON.parse(localStorage.getItem("user"))
     const addPost = () => {
 
-        if (title.length > 13) {
-            M.toast({ html: 'Maximum length - 13 characters', classes: "#c62828 red darken-3" })
+        if (title.length > 23) {
+            M.toast({ html: 'Maximum length - 23 characters', classes: "#c62828 red darken-3" })
             return
         } else if (title.length < 3 || content.length < 3) {
             M.toast({ html: 'Minimal length - 3 characters', classes: "#c62828 red darken-3" })

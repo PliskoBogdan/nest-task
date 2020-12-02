@@ -51,6 +51,7 @@
 }
 
 .post__gallery__item{
+  white-space: pre-wrap;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -67,9 +68,11 @@
   
 }
 .post__gallery__item-content{
+  overflow-x:hidden;
   font-size: 18px;
-color: #fff;
+  color: #fff;
   text-align: center;
+  max-width: 400px;
 }
 .post__gallery__item-author{
   font-size: 13px;
