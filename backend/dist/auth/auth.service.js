@@ -18,7 +18,7 @@ let AuthService = class AuthService {
         this.userService = userService;
     }
     async signPayload(payload) {
-        return jsonwebtoken_1.sign(payload, 'secretKey', { expiresIn: '7d' });
+        return jsonwebtoken_1.sign(payload, 'secretKey', { expiresIn: process.env.TOKEN_EXPIRES });
     }
     async validateUser(payload) {
         return await this.userService.findByPayload(payload);

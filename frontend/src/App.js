@@ -1,5 +1,4 @@
 import React, { useEffect, createContext, useReducer, useContext } from 'react'
-
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 
 import './App.css';
@@ -20,9 +19,8 @@ const Routing = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
-    console.log(user);
     if (user) {
-      dispatch({type: "USER", payload:user})
+      dispatch({ type: "USER", payload: user })
       history.push('/profile')
     } else {
       history.push('/signin')

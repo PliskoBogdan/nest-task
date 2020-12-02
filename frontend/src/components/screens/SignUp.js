@@ -13,8 +13,22 @@ const SignUp = () => {
     const [first_name, setFirstName] = useState("")
     const [last_name, setLastName] = useState("")
     const [password, setPassword] = useState("")
+    const [confirm_password, setConfirmPassword] = useState("")
 
     const PostData = () => {
+
+        if(!username || !first_name || !last_name || !password || !confirm_password){
+            M.toast({ html: "Some field is empty", classes: "#c62828 red darken-3" })
+            return
+        }
+
+        if(password !== confirm_password){
+            M.toast({ html: "Password do not match", classes: "#c62828 red darken-3" })
+            return
+        }else if(password.length < 5){
+            M.toast({ html: "Password is too short", classes: "#c62828 red darken-3" })
+            return
+        }
 
         fetch("http://localhost:5000/auth/register", {
             method: 'post',
@@ -30,7 +44,6 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.statusCode === 400) {
                     M.toast({ html: data.message, classes: "#c62828 red darken-3" })
                 } else {
@@ -68,6 +81,12 @@ const SignUp = () => {
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                ></input>
+                <input
+                    type="password"
+                    placeholder="Confirm password"
+                    value={confirm_password}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                 ></input>
 
                 <button className="btn waves-effect waves-light #ef5350 red lighten-1"

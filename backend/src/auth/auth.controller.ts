@@ -18,7 +18,7 @@ export class AuthController {
             last_name: user.last_name,
             userId: user._id
         }
-        
+
 
         const payload = {
             userId: user._id,
@@ -34,7 +34,6 @@ export class AuthController {
     async register(@Body() userDTO: any) {
 
         const user = await this.userService.create(userDTO);
-
         return { user }
     }
 

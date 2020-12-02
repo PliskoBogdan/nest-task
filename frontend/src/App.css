@@ -82,14 +82,19 @@ color: #fff;
   left: auto !important;
 }
 
-
-.editPost{
+.post__gallery__header{
   position: absolute;
-  right:  0;
+  right: 0;
   top: 0;
-  cursor: pointer
+}
+.editPost {
+cursor: pointer;
 
 }
+.deletePost{
+  cursor: pointer;
+  margin-right: 5px;
+  }
 
 .post__gallery__item{
   margin: 10px 0;
@@ -102,6 +107,9 @@ color: #fff;
 .btn{ 
   margin: 5px 0;
 }
-.class-block{
+.hide-block{
   display: none;
+}
+.show-block{
+  display: block;
 }

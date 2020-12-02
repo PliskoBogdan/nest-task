@@ -29,7 +29,6 @@ let PostsController = class PostsController {
         });
     }
     async getMyPosts(res, userId) {
-        console.log(userId);
         const myPosts = await this.postService.getMyPosts(userId);
         if (!myPosts)
             throw new common_1.NotFoundException('You dont have posts');
@@ -45,7 +44,6 @@ let PostsController = class PostsController {
         });
     }
     async deleteCustomer(res, postId) {
-        console.log(postId);
         const post = await this.postService.deletePost(postId);
         if (!post)
             throw new common_1.NotFoundException('Post does not exist');

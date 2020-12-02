@@ -24,7 +24,6 @@ let JwtStrategy = class JwtStrategy extends passport_1.PassportStrategy(passport
     }
     async validate(payload, done) {
         const user = await this.authService.validateUser(payload);
-        console.log(user);
         if (!user) {
             return done(new common_1.HttpException('Unauthorized access', common_1.HttpStatus.UNAUTHORIZED), false);
         }

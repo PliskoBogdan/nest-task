@@ -5,12 +5,12 @@ import { AuthService } from './auth.service';
 import { JwtStrategy } from './jwt.strategy';
 
 @Module({
-  
+
   controllers: [AuthController],
   imports: [
     SharedModule,
-    
+
   ],
   providers: [AuthService, JwtStrategy]
 })
-export class AuthModule {}
+export class AuthModule { }
